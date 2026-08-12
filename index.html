@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg-main: #f8f9fa;
@@ -85,6 +86,7 @@
                 flex-direction: column;
                 text-align: center;
             }
+
             .header-text {
                 text-align: center;
             }
@@ -217,17 +219,19 @@
         }
 
         /* ----- Flowchart CSS เริ่มต้น ----- */
+
         .fc-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 1rem 0 3rem 0;
-            padding: 2rem 1rem; /* ลด padding ด้านข้างบนมือถือ */
+            padding: 2rem 1rem;
             background: #fafafa;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-            overflow-x: hidden; /* เปลี่ยนเป็น hidden เพื่อไม่ให้มี scrollbar แนวนอน */
+            overflow-x: hidden;
         }
+
         .fc-node {
             background: #ffffff;
             padding: 0.6rem 1.2rem;
@@ -241,10 +245,12 @@
             white-space: nowrap;
             z-index: 2;
         }
+
         .fc-node-sm {
             font-size: 0.85rem;
             padding: 0.5rem 0.8rem;
         }
+
         .fc-node-plain {
             font-size: 0.95rem;
             font-weight: 500;
@@ -253,12 +259,14 @@
             white-space: nowrap;
             z-index: 2;
         }
+
         .fc-line {
             width: 1.5px;
             height: 25px;
             background-color: #adb5bd;
             margin: 0 auto;
         }
+
         .fc-arrow {
             width: 0;
             height: 0;
@@ -267,52 +275,61 @@
             border-top: 6px solid #adb5bd;
             margin-bottom: 3px;
         }
+
         .fc-branch-top {
             display: flex;
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
         }
+
         .fc-branch-top .left {
             flex: 1;
             border-top: 1.5px solid #adb5bd;
             border-left: 1.5px solid #adb5bd;
             height: 25px;
         }
+
         .fc-branch-top .center {
             width: 1.5px;
             background: #adb5bd;
             height: 25px;
         }
+
         .fc-branch-top .right {
             flex: 1;
             border-top: 1.5px solid #adb5bd;
             border-right: 1.5px solid #adb5bd;
             height: 25px;
         }
+
         .fc-branch-bottom {
             display: flex;
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
         }
+
         .fc-branch-bottom .left {
             flex: 1;
             border-bottom: 1.5px solid #adb5bd;
             border-left: 1.5px solid #adb5bd;
             height: 25px;
         }
+
         .fc-branch-bottom .center {
             width: 1.5px;
             background: #adb5bd;
             height: 25px;
         }
+
         .fc-branch-bottom .right {
             flex: 1;
             border-bottom: 1.5px solid #adb5bd;
             border-right: 1.5px solid #adb5bd;
             height: 25px;
         }
+
         .fc-row {
             display: flex;
             width: 100%;
@@ -321,32 +338,38 @@
             margin: 0 auto;
             gap: 15px;
         }
+
         .fc-row .fc-node {
             flex: 1;
         }
-        
+
         .show-mobile {
             display: none;
         }
 
         /* --- การปรับ Responsive (Flex) สำหรับหน้าจอขนาดเล็ก --- */
+
         @media (max-width: 576px) {
             .hide-mobile {
                 display: none !important;
             }
+
             .show-mobile {
                 display: block;
             }
+
             .fc-row {
-                flex-direction: column; /* เปลี่ยนให้เรียงลงมาด้านล่างตามแนวตั้ง */
+                flex-direction: column;
                 align-items: center;
-                gap: 0; /* ใช้เส้น show-mobile คั่นแทน gap */
+                gap: 0;
             }
+
             .fc-row .fc-node {
                 width: 100%;
-                max-width: 200px; /* จำกัดความกว้างไม่ให้ใหญ่เกินไปเมื่อเรียงเป็นแถวเดียว */
+                max-width: 200px;
             }
         }
+
         /* ----- Flowchart CSS สิ้นสุด ----- */
 
         .flow-step-grid {
@@ -418,11 +441,13 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
         <div class="header-inner">
             <img src="ITLego.png" alt="IT NPRU Logo" class="header-logo">
+
             <div class="header-text">
                 <h1>MALEE <span>AI VTuber</span></h1>
                 <p>ผู้ช่วยเสมือนจริงประจำสาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏนครปฐม</p>
@@ -431,28 +456,47 @@
     </header>
 
     <div class="container">
-        
+
         <!-- Hero & Origin -->
+
         <section class="hero-section">
+
             <div class="hero-image">
                 <img src="malee.png" alt="มาลี AI VTuber">
             </div>
+
             <div class="hero-content">
-                <h2 class="section-title">มาลีถูกสร้างขึ้นมาอย่างไร?</h2>
+
+                <h2 class="section-title">
+                    มาลีถูกสร้างขึ้นมาอย่างไร?
+                </h2>
+
                 <p>
                     &emsp;ที่ผ่านมา การนำเสนอข้อมูลของสาขา IT มักขาดความน่าสนใจ และคนทั่วไปมองว่าเนื้อหาหรือศัพท์เทคนิคเป็นเรื่องยาก จากปัญหาดังกล่าว ผู้จัดทำจึงได้แรงบันดาลใจจากเทคโนโลยี AI VTuber แบบ Open-source
                 </p>
+
                 <p>
-                    &emsp;จึงได้นำแนวคิดนี้มาสร้าง <strong>'มาลี'</strong> AI VTuber ที่ขับเคลื่อนด้วยโมเดลภาษาขนาดใหญ่ (LLM) โดยเน้นฝึกข้อมูลเฉพาะทางด้าน IT พื้นฐาน และข้อมูลของสาขา IT มหาวิทยาลัยราชภัฏนครปฐม เพื่อใช้เป็นนวัตกรรมใหม่ในการสื่อสารและแก้ปัญหาข้างต้น
+                    &emsp;จึงได้นำแนวคิดนี้มาสร้าง <strong>'มาลี'</strong> AI VTuber ที่ขับเคลื่อนด้วยโมเดลภาษาขนาดใหญ่ (LLM) โดยเน้นใช้ข้อมูลเฉพาะทางด้าน IT พื้นฐาน และข้อมูลของสาขา IT มหาวิทยาลัยราชภัฏนครปฐม ผ่านระบบ RAG เพื่อใช้เป็นฐานความรู้สำหรับการตอบคำถาม
                 </p>
+
             </div>
         </section>
 
+
         <!-- Rules & Demo Script -->
+
         <div class="grid-2">
+
             <div class="card">
-                <h3>1. ตั้งกฎเหล็กและบุคลิก (Rules & Persona)</h3>
-                <p>กำหนดให้ AI รับบท "มาลี" ผู้ช่วยสาขาเทคโนโลยีสารสนเทศ ที่มีนิสัยสดใส เป็นมิตร และใช้คำลงท้ายเป็นธรรมชาติ</p>
+
+                <h3>
+                    1. ตั้งกฎเหล็กและบุคลิก (Rules & Persona)
+                </h3>
+
+                <p>
+                    กำหนดให้ AI รับบท "มาลี" ผู้ช่วยสาขาเทคโนโลยีสารสนเทศ ที่มีนิสัยสดใส เป็นมิตร และใช้คำลงท้ายเป็นธรรมชาติ
+                </p>
+
                 <ul>
                     <li>ต้องตอบตรงคำถาม</li>
                     <li>ห้ามเปลี่ยนประเด็น</li>
@@ -460,108 +504,254 @@
                     <li>ห้ามใช้ข้อมูลนอกเรื่อง</li>
                     <li>ต้องใช้ภาษาที่เข้าใจง่าย</li>
                 </ul>
+
             </div>
 
+
             <div class="card">
-                <h3>2. บทสนทนาตัวอย่าง (Demo Script)</h3>
-                <p>สคริปต์จำลองการคุยระหว่างพิธีกรกับมาลีสำหรับสาธิตบนเวที โดยใช้เป็นตัวอย่าง (Few-Shot Prompting)</p>
+
+                <h3>
+                    2. บทสนทนาตัวอย่าง (Demo Script)
+                </h3>
+
+                <p>
+                    สคริปต์จำลองการคุยระหว่างพิธีกรกับมาลีสำหรับสาธิตบนเวที โดยใช้เป็นตัวอย่างในการกำหนดแนวทางการตอบ (Few-Shot Prompting)
+                </p>
+
                 <ul>
                     <li>ช่วยให้ AI ดูแนวทางการเรียบเรียงคำตอบ</li>
                     <li>คุมโทนการพูดเมื่อถูกถามเรื่องเทคโนโลยี</li>
                     <li>รองรับเรื่อง AI, IoT, Cloud, Speech Recognition</li>
                     <li>ตอบสละสลวยและลื่นไหลเหมือนคนจริง</li>
                 </ul>
+
             </div>
+
         </div>
 
-        <!-- Workflow Steps -->
+
+        <!-- System Architecture -->
+
         <section class="architecture-section">
-            <h2 class="section-title">สถาปัตยกรรมและการทำงาน (System Architecture)</h2>
-            
+
+            <h2 class="section-title">
+                สถาปัตยกรรมและการทำงาน (System Architecture)
+            </h2>
+
+
             <!-- Flowchart Visual -->
+
             <div class="fc-wrapper">
-                <div class="fc-node-plain">👤 ผู้ใช้</div>
+
+                <div class="fc-node-plain">
+                    👤 ผู้ใช้
+                </div>
+
                 <div class="fc-line"></div>
-                
-                <div class="fc-node-plain">🎤 เสียง / 💬 ข้อความ</div>
+
+
+                <div class="fc-node-plain">
+                    🎤 เสียง / 💬 ข้อความ
+                </div>
+
                 <div class="fc-line"></div>
-                
-                <div class="fc-node-plain">Speech-to-Text</div>
-                <div class="fc-line"></div><div class="fc-arrow"></div>
-                
-                <div class="fc-node-plain">🔍 RAG ค้นข้อมูล</div>
+
+
+                <div class="fc-node-plain">
+                    Speech-to-Text (STT)
+                </div>
+
                 <div class="fc-line"></div>
-                
-                <!-- ส่วนแยก 3 ทาง (จะถูกซ่อนบนหน้าจอมือถือ) -->
+                <div class="fc-arrow"></div>
+
+
+                <div class="fc-node-plain">
+                    🔍 RAG ค้นคืนข้อมูล
+                </div>
+
+                <div class="fc-line"></div>
+
+
+                <!-- ส่วนแยก 3 ทาง -->
+
                 <div class="fc-branch-top hide-mobile">
+
                     <div class="left"></div>
+
                     <div class="center"></div>
+
                     <div class="right"></div>
+
                 </div>
-                
+
+
                 <div class="fc-row">
-                    <div class="fc-node fc-node-sm">💻 IT พื้นฐาน</div>
-                    
+
+                    <div class="fc-node fc-node-sm">
+                        💻 IT พื้นฐาน
+                    </div>
+
+
                     <!-- เส้นเชื่อมตรงกลางบนมือถือ -->
-                    <div class="fc-line show-mobile"></div> 
-                    
-                    <div class="fc-node fc-node-sm">🏫 ข้อมูลสาขา</div>
-                    
-                    <!-- เส้นเชื่อมตรงกลางบนมือถือ -->
+
                     <div class="fc-line show-mobile"></div>
-                    
-                    <div class="fc-node fc-node-sm">📚 รายวิชา</div>
+
+
+                    <div class="fc-node fc-node-sm">
+                        🏫 ข้อมูลสาขา
+                    </div>
+
+
+                    <!-- เส้นเชื่อมตรงกลางบนมือถือ -->
+
+                    <div class="fc-line show-mobile"></div>
+
+
+                    <div class="fc-node fc-node-sm">
+                        📚 รายวิชา
+                    </div>
+
                 </div>
-                
-                <!-- ส่วนรวมกลับ (จะถูกซ่อนบนหน้าจอมือถือ) -->
+
+
+                <!-- ส่วนรวมกลับ -->
+
                 <div class="fc-branch-bottom hide-mobile">
+
                     <div class="left"></div>
+
                     <div class="center"></div>
+
                     <div class="right"></div>
+
                 </div>
-                
-                <div class="fc-line"></div><div class="fc-arrow"></div>
-                
-                <div class="fc-node-plain">LLM / บุคลิกของมาลี</div>
-                <div class="fc-line"></div><div class="fc-arrow"></div>
-                
-                <div class="fc-node-plain">💬 คำตอบของมาลี</div>
-                <div class="fc-line"></div><div class="fc-arrow"></div>
-                
-                <div class="fc-node-plain">Text-to-Speech</div>
-                <div class="fc-line"></div><div class="fc-arrow"></div>
-                
-                <div class="fc-node-plain">🔊 มาลีพูดตอบ / 🎭 Live2D มาลี</div>
+
+
+                <div class="fc-line"></div>
+                <div class="fc-arrow"></div>
+
+
+                <div class="fc-node-plain">
+                    🧠 LLM + กฎบุคลิกของมาลี
+                </div>
+
+                <div class="fc-line"></div>
+                <div class="fc-arrow"></div>
+
+
+                <div class="fc-node-plain">
+                    💬 คำตอบของมาลี
+                </div>
+
+                <div class="fc-line"></div>
+                <div class="fc-arrow"></div>
+
+
+                <div class="fc-node-plain">
+                    Text-to-Speech (TTS)
+                </div>
+
+                <div class="fc-line"></div>
+                <div class="fc-arrow"></div>
+
+
+                <div class="fc-node-plain">
+                    🔊 เสียงของมาลี / 🎭 Live2D Lip Sync
+                </div>
+
             </div>
+
+
+            <!-- Workflow Steps -->
 
             <div class="flow-step-grid">
-                <div class="step-box">
-                    <div class="step-number">Step 01</div>
-                    <div class="step-title">🎙️ รับข้อมูล (TTS)</div>
-                    <div class="step-desc">ผู้ใช้พูดหรือพิมพ์เข้ามา ระบบ Speech-to-Text จะแปลงเสียงเป็นตัวหนังสือ</div>
-                </div>
 
-                <div class="step-box highlight">
-                    <div class="step-number">Step 02</div>
-                    <div class="step-title">🔍 ค้นหาข้อมูล (RAG)</div>
-                    <div class="step-desc">ค้นหาข้อมูลเฉพาะทาง เช่น IT พื้นฐาน, ข้อมูลสาขา หรือรายวิชาเตรียมไว้</div>
-                </div>
+
+                <!-- Step 01 -->
 
                 <div class="step-box">
-                    <div class="step-number">Step 03</div>
-                    <div class="step-title">🧠 ประมวลผล (LLM)</div>
-                    <div class="step-desc">นำ "คำถาม + ข้อมูล RAG + กฎบุคลิก" ส่งเข้าประมวลผลผ่าน LLM เพื่อเรียบเรียงคำตอบ</div>
+
+                    <div class="step-number">
+                        Step 01
+                    </div>
+
+                    <div class="step-title">
+                        🎙️ รับข้อมูล (STT)
+                    </div>
+
+                    <div class="step-desc">
+                        ผู้ใช้พูดหรือพิมพ์เข้ามา โดยระบบ Speech-to-Text (STT) จะแปลงเสียงพูดเป็นข้อความ เพื่อส่งต่อไปยังขั้นตอนค้นคืนข้อมูลและประมวลผล
+                    </div>
+
                 </div>
 
+
+                <!-- Step 02 -->
+
                 <div class="step-box highlight">
-                    <div class="step-number">Step 04</div>
-                    <div class="step-title">🔊 แสดงผล (TTS & Live2D)</div>
-                    <div class="step-desc">แปลงคำตอบเป็นไฟล์เสียง (TTS) และสั่งให้โมเดล Live2D ขยับปากตรงกับเสียง</div>
+
+                    <div class="step-number">
+                        Step 02
+                    </div>
+
+                    <div class="step-title">
+                        🔍 ค้นหาข้อมูล (RAG)
+                    </div>
+
+                    <div class="step-desc">
+                        ระบบค้นคืนข้อมูลที่เกี่ยวข้องจากฐานความรู้ เช่น IT พื้นฐาน ข้อมูลสาขา หรือรายวิชา แล้วนำข้อมูลที่ค้นพบไปใช้เป็น Context สำหรับ LLM
+                    </div>
+
                 </div>
+
+
+                <!-- Step 03 -->
+
+                <div class="step-box">
+
+                    <div class="step-number">
+                        Step 03
+                    </div>
+
+                    <div class="step-title">
+                        🧠 ประมวลผล (LLM)
+                    </div>
+
+                    <div class="step-desc">
+                        นำ "คำถาม + ข้อมูลที่ค้นพบจาก RAG + กฎบุคลิก" ส่งเข้าประมวลผลผ่าน LLM เพื่อเรียบเรียงคำตอบให้เหมาะสมกับบริบทและบุคลิกของมาลี
+                    </div>
+
+                </div>
+
+
+                <!-- Step 04 -->
+
+                <div class="step-box highlight">
+
+                    <div class="step-number">
+                        Step 04
+                    </div>
+
+                    <div class="step-title">
+                        🔊 แสดงผล (TTS & Live2D)
+                    </div>
+
+                    <div class="step-desc">
+                        แปลงคำตอบเป็นเสียงด้วย Text-to-Speech (TTS) และนำระดับเสียงของเสียงที่กำลังเล่นไปใช้ควบคุมการขยับปากของโมเดล Live2D ด้วยระบบ Lip Sync
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
     </div>
+
+
+    <footer>
+        MALEE AI VTuber — สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏนครปฐม
+    </footer>
 
 </body>
 </html>
